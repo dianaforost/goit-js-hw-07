@@ -21,9 +21,7 @@ gallery.addEventListener("click", (event) => {
   const originalImage = event.target.dataset.sourse;
 
   const instance = basicLightbox.create(`
-  <div class="modal">
   <img src="${originalImage}" width="1280" height="auto" />
-  </div>
   `);
 
   instance.show();
