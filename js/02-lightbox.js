@@ -13,6 +13,7 @@ function createMarkup() {
 }
 createMarkup();
 const lightbox = new SimpleLightbox(".gallery .gallery__link", {
+const lightbox = new SimpleLightbox(".gallery .gallery__item", {
   captionsData: "alt",
   captionDelay: 250,
   captionPosition: "bottom",
