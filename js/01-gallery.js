@@ -23,13 +23,12 @@ gallery.addEventListener("click", (event) => {
   const instance = basicLightbox.create(`
   <img src="${originalImage}" width="1280" height="auto" />
   `);
-
+  gallery.addEventListener("keydown", remoweEvent);
   instance.show();
-
-  gallery.addEventListener("keydown", (e) => {
+  function remoweEvent(e) {
     if (e.key === "Escape") {
-      instance.close();
+      instance.close(() => gallery.removeEventListener("keydown", remoweEvent));
     }
-  });
+  }
 });
 console.log(galleryItems);
